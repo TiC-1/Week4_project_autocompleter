@@ -1,6 +1,6 @@
 var http = require("http");
-// var index = require("./src/index.js");
-var server = http.createServer();
+var router = require("/router.js")
+var server = http.createServer(router);
 
 server.listen(3006, function() {
   console.log("listenig port 3006");
