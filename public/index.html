@@ -1,35 +1,44 @@
 
 <!DOCTYPE html>
-    <html>
-    
-      <head>
+  <html>
+
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Autocomplete</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
-      </head>
+    </head>
     
-      <body>
+    <body>
     
+      <header>
+
+      </header>
     
+        <section class="mainContainer">
+          <div class="formContainer">
+            <h1 class="input_heading" tabindex="0">Autocomplete</h1>
+              <p class=instruction> Autocomplete!!! (input a letter and enjoy our hard work!!)</p>
+                <form class="form" id="searchForm">
+                  <input class="inputBox" aria-label="input textbox" placeholder="Type a letter" type="text" name="description" value="" required aria-required="true">
+                  <input class="inputButton" type="submit" role="button" aria-label="Search" value="" tabindex="0">
+                </form>
+                <div id="autocompletePreview">
+                </div>
+          </div>
+      </section>
     
-    
-    
-        <section class="">
-    
-          
-    
-    
-    
-        </section>
-    
-        <div id="footer"></div>
+      <footer>
+
+      </footer>
+        
         <script src="js/logic.js"></script>
         <script src="js/dom.js"></script>
+    
       </body>
     
-</html>
+  </html>
 
 
 

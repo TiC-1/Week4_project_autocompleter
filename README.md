@@ -9,13 +9,13 @@ As a user, I want to type the first letter of a word i'm going to type in a text
 ## Statement process
 
 1. The user types a letter
-2. A request is sent with the word typed.
-3. The app returns a list of possible words with the letter the user inserted.
+2. A request is sent with the letter typed.
+3. The server returns a list of possible words with the letter the user inserted.
 4. The list is displayed on the page ( possibly in the textbox).
-5. If the words displayed does not contain the word the user intended the user type another letter
-6.The old request is deleted and a new request is made with the new two letters.
+5. If the words displayed does not contain the word the user intended to write, the user type       another letter.
+6. The old request is deleted and a new request is made with the new two letters.
 7. The app returns a list of possible words with the letters the user inserted.
-8.It goes like that until the user find the word he intended to write.
+8. It goes like that until the user find the word he intended to write.
 
 
 ## File structure
