@@ -18,9 +18,11 @@ function request(cb, url) {
   }
 
 function getWordlist(cb, state) {
-    var url = (server + str); // completare
-    request(function(err, obj) {
-       var wordlist = obj;
-      cb(wordlist);
+    console.log(state);
+    var url = (server + "/" + state); // completare
+        console.log(url);
+        request(function(err, obj) {
+        var wordlist = obj;
+        cb(wordlist);
     }, url);
   }
