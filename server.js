@@ -1,7 +1,7 @@
 var http = require("http");
-var router = require("./src/router");
-var server = http.createServer(router);
+// var index = require("./src/index.js");
+var server = http.createServer();
 
-server.listen(3005, function() {
-  console.log("listenig port 3005");
+server.listen(3006, function() {
+  console.log("listenig port 3006");
 });
