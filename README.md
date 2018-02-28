@@ -1,4 +1,4 @@
-# Our week 3 project : A 'autocompleter' Webapp
+# Our week 4 project : A 'autocompleter' Webapp
 
 **The goal of this week project is to make a webapp that on the input of a user it returns a list of possibile entries in order to complete the word the user is typing (like google!!)
 
