@@ -75,4 +75,13 @@ footer {
   margin-top: 20px;
 }
 
+.acList {
+  border: 1px solid #888;
+  padding: 20px
+}
+
+.acWord {
+  color: #999
+}
+
 @media (min-width: 768px) {}

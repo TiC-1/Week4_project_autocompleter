@@ -1,13 +1,12 @@
 // Root domain
-var server = "http://localhost:3006";
+var server = "http://localhost:3006/search";
 
 
 // Main function to get infos from server
 function getWordlist(cb, state) {
-  var url = (server + "/" + state);
+  var url = (server) //+ state);
   request(function(err, obj) {
-    var wordlist = obj;
-    cb(wordlist);
+    cb(obj);
   }, url);
 }
 
@@ -16,12 +15,11 @@ function getWordlist(cb, state) {
 function request(cb, url) {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) { // Request is completed
-      if (xhr.status === 200) { // Request succeeded
+    if (xhr.readyState === 4) { // When request is completed
+      if (xhr.status === 200) { // When request succeeded
         var responseObj = JSON.parse(xhr.responseText);
-        console.log("response=" + responseObj); // ok?
-        cb(null, responseObj);
-      } else { // Error in request
+        cb(null, responseObj); // Launch callback function
+      } else { // In case of error in request
         var errorMessage = xhr.responseText;
         cb("Error " + url + " " + errorMessage);
       }
