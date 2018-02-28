@@ -1,15 +1,17 @@
-var fs = require("fs");
-var querystring = require("querystring");
 var staticHandler = require("./handler.js");
+var searchHandler = require("./searchHandler.js");
+
 
 function router(request, response) {
   var endpoint = request.url;
+  console.log(endpoint);
   if (endpoint === "/") {
     staticHandler.index(request, response);
-  } else if (endpoint === "/search") {
-    response.end(JSON.stringify(["a", "b", "c", "d", "f", "a", "b", "c", "d", "f"]));
+  } else if (endpoint.indexOf("/search")===0) {
+    searchHandler(request, response);
   } else {
-    handler.assets(request, response);
+    staticHandler.assets(request, response);
+
 
   }
 

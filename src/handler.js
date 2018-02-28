@@ -1,4 +1,5 @@
 var fs = require("fs");
+var autocomplete = require("./dictionary.js")
 
 function indexHandler(request, response) {
     fs.readFile(__dirname + "/../public/index.html", function(error, file) {
@@ -16,6 +17,21 @@ function indexHandler(request, response) {
     });
 
   }
+  //
+  // function searchHandler(request, response){
+  //         var text = request.url;
+  //         const parsed = queryString.parse(text);
+  //         console.log(parsed['/search']);
+  //         var result = wordSearch(parsed['/search']);
+  //         response.writeHead(200,{'Content-Type': 'application/json'}, function (error){
+  //         if (error){
+  //             console.log('searchHandler ' + error);
+  //             return;
+  //             }
+  //           });
+  //         console.log(result);
+  //         response.end(JSON.stringify(result));
+  //     };
 
 
 function assetsHandler (request, response){
