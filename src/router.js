@@ -9,7 +9,7 @@ function router(request, response) {
   } else if (endpoint === "/search") {
     response.end(JSON.stringify(["a", "b", "c", "d", "f", "a", "b", "c", "d", "f"]));
   } else {
-    handler.assets(request, response);
+    staticHandler.assets(request, response);
 
   }
 

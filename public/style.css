@@ -9,7 +9,7 @@ body {
 }
 
 .mainContainer {
-  margin: 0 30px;
+  margin: 0 50px;
 }
 
 .instruction {
@@ -64,6 +64,15 @@ body {
 .inputBox::-webkit-input-placeholder {
   font-size: 1rem;
   color: #bababa;
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  padding: 30px;
+  color: #666;
+  min-height: 100px;
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {}
