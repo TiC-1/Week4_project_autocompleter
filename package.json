@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/TiC-1/Week4_project#readme",
   "devDependencies": {
-    "nodemon": "^1.15.1",
+    "nodemon": "^1.17.1",
     "supertest": "^3.0.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.9.0"

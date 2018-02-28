@@ -14,9 +14,13 @@ assert.end();
 });
 });
 
-
-
-
-// assert.ok(response.text.includes("A"),
-//  "we can open the .txt");
-//   assert.end();
+test ("index.html", function (assert) {
+    supertest(router)
+        .get("/")
+        .expect(200)
+        .end(function(error, response) {
+                assert.ok(response.text.includes("<title>Autocomplete</title>"), 
+                "Root renders index.html");
+            assert.end();
+        });
+});
