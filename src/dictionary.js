@@ -1,7 +1,8 @@
 var fs = require("fs");
 var autocomplete = [];
 
-fs.readFile(__dirname + "/../words.txt", 'utf8', function (error, data){
+function heavy (callback){
+fs.readFile(__dirname + "/../wordsHeacy.txt", 'utf8', function (error, data){
 autocomplete = data.split('\n');
 
 // // var cleanInput = endpoint.replace(/[^A-Za-z]/g, '');
@@ -18,6 +19,9 @@ autocomplete = data.split('\n');
 // console.log(output);
 // return output;
 //
+callback(autocomplete);
  });
 
-module.exports = autocomplete;
+ }
+
+module.exports = heavy;
