@@ -12,7 +12,6 @@ function router(request, response) {
   } else {
     staticHandler.assets(request, response);
 
-
   }
 
 }

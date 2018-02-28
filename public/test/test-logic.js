@@ -11,15 +11,28 @@ test("Api Test", function(assert) {
 
 });
 
+test("Server Test", function(assert) {
+  function assertTestApiReq (err, obj) {
+    assert.equal(obj[1], "b", "not b!");
+    console.log(obj);
+  }
+  var url = "http://localhost:3006/search";
+  request (assertTestApiReq, url);
+  
+  
+  assert.ok(true, "second");
+
+});
+
 
 // GLOBAL **********************************************
 
 test("Global", function (assert) {
     function callback (obj){
-        assert.equal(obj,"localhost:3002/abc","URL OK!!!" )
+        assert.equal(obj,"[a,b,c,d,e,f,g,h,i,l]","URL OK!!!" )
     }
   
-  getWordlist(callback, "abc");
-
+  getWordlist(callback, "localhost:3002/search");
+    
 
 });
