@@ -1,10 +1,10 @@
 // Root domain
-var server = "http://localhost:3006/search";
+var server = "http://localhost:3006/search?description=";
 
 
 // Main function to get infos from server
 function getWordlist(cb, state) {
-  var url = (server) //+ state);
+  var url = server + state;
   request(function(err, obj) {
     cb(obj);
   }, url);
