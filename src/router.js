@@ -7,9 +7,12 @@ function router(request, response) {
   if (endpoint === "/") {
     staticHandler.index(request, response);
   } else if (endpoint === "/search") {
-    response.end(JSON.stringify(["a", "b", "c", "d", "f", "a", "b", "c", "d", "f"]));
+    // response.end(JSON.stringify(["a", "b", "c", "d", "f", "a", "b", "c", "d", "f"]));
+    searchHandler.search(request, response);
+    response.end(autocomplete);
   } else {
-    handler.assets(request, response);
+    staticHandler.assets(request, response);
+    
 
   }
 

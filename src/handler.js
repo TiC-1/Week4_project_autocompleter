@@ -1,4 +1,5 @@
 var fs = require("fs");
+var autocomplete = [];
 
 function indexHandler(request, response) {
     fs.readFile(__dirname + "/../public/index.html", function(error, file) {
@@ -16,6 +17,20 @@ function indexHandler(request, response) {
     });
 
   }
+
+// function searchHandler(request, response) {
+//   fs.readFile(__dirname + "./wordsTest.txt", 'utf8', function (error, data){
+//     autocomplete = data.split('\n');
+//     console.log(autocomplete);
+//     if (error) {
+//       console.error(error);
+//       response.writeHead(404);
+//     } else {
+    
+//     }
+    
+//     });
+// }
 
 
 function assetsHandler (request, response){

@@ -1,18 +1,19 @@
-var fs = require("fs");
-var autocomplete = [];
+var autocomplete = require("/dictionary.js");
 
-fs.readFile(__dirname + "/../words.txt", 'utf8', function (error, data){
-autocomplete = data.split('\n');
-// console.log(autocomplete);
-// return callback (error, autocomplete.words);
-});
+function filterArray(input, autocomplete){
+  var cleanInput = input.replace(/[^A-Za-z]/g, '');
+  var output = [];
+  
+  var re = new RegExp('\^' + cleanInput, 'i');
+  
+  for (var i = 0, l = autocomplete.length; i < l && output.length < 5; i++) {
+  var word = autocomplete[i];
+  if (re.test(word)) {
+  output.push(word);
+  }
+  }
+  
+  return output;
+  }
 
-var wordSearch = function (str) {
-  console.log(str +"this is string");
-  var finalArr = autocomplete.filter(function(character){
-    return character.match(str);
-  });
-  var finalArr2 = finalArr.slice(0, 10);
-}
-
-module.exports = wordSearch;
+module.exports = filterArray;
