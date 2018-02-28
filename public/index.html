@@ -4,41 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autocomplete</title>
+  <title>Autocompletor</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <header>
-
-  </header>
-
   <section class="mainContainer">
+
+    <header class="header">
+      <h1 class="heading">Autocompletor</h1>
+    </header>
+
     <div class="formContainer">
-      <h1 class="input_heading" tabindex="0">Autocompletor</h1>
-      <p class=instruction> Type something in the form and get autocompleted suggestions</p>
-      <form class="form" id="searchForm">
-        <input class="inputBox" id="input_box" aria-label="input textbox" placeholder="Type something…" type="text" name="description" value="" required aria-required="true" oninput="getInputValue()">
-        <!-- <input class="inputButton" type="submit" role="button" aria-label="Search" value="" tabindex="0"> -->
+      <p class=instruction> Type something and get suggestions</p>
+      <form id="searchForm" class="form">
+        <input id="inputBox" class="inputBox" aria-label="input textbox" placeholder="pizza, John Wayne, e=mc2..." type="text" name="description" value="" required aria-required="true" oninput="getInputValue()">
       </form>
+
       <div id="acPreview">
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <p>TiC1 - Turn into Coders Javascript Bootcamp first session</p>
-  </footer>
+    </div>
+
+    <footer>
+      <p>Turn into Coders // Javascript Bootcamp // TiC-1</p>
+      <p class="credits">Photo by rawpixel.com on Unsplash</p>
+    </footer>
+
+  </section>
 
   <script src="./test/testobj.js"></script>
   <script src="./js/logic.js"></script>
   <script src="./js/dom.js"></script>
-
-        <script type="text/javascript" src="/test/testobj.js"></script>
-        <script src="js/logic.js"></script>
-        <script src="js/dom.js"></script>
 
 </body>
 

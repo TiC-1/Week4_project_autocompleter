@@ -9,79 +9,104 @@ body {
 }
 
 .mainContainer {
-  margin: 0 50px;
+  width: 100%;
+  margin: 0;
+  background-color: #eee;
+  text-align: center;
+}
+
+.header {
+  height: 200px;
+  background-image: url(./assets/images/rawpixel-com-274862-unsplash.jpg);
+  background-position: center;
+  background-size: 150%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  font-family: 'Bungee Inline', cursive;
+  color: white;
+  opacity: 0.9;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.formContainer {
+  margin: 30px 20px;
+  text-align: center;
 }
 
 .instruction {
-  font-weight: normal;
   text-align: center;
-  color: black;
-  padding: 50px 40px;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 20px 0;
 }
 
 .form {
   width: 100%;
-  box-shadow: 0px 1px 1px 0px rgba(100, 100, 100, 0.75);
-}
-
-.input_heading {
-  font-weight: normal;
   text-align: center;
-  color: black;
-  padding: 50px 40px;
-  background: whitesmoke;
-}
-
-.form {
-  border-bottom: 1px solid rgba(100, 100, 100, 0.15);
-  padding: 20px 0;
-  display: flex;
-  justify-content: space-between;
 }
 
 .inputBox {
-  padding-left: 40px;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  width: 90%;
-}
-
-.inputButton {
-  padding: 20px;
-  margin-right: 20px;
-  background-size: 25px;
-  background: url('./assets/images/search.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.inputButton:hover {
-  opacity: 0.8;
-  background-size: 28px;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.2rem;
 }
 
 .inputBox::-webkit-input-placeholder {
-  font-size: 1rem;
-  color: #bababa;
-}
-
-footer {
-  text-align: center;
-  background-color: #000;
-  padding: 30px;
-  color: #666;
-  min-height: 100px;
-  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #999;
 }
 
 .acList {
-  border: 1px solid #888;
-  padding: 20px
+  /*border: 1px solid #ccc;*/
+  background-color: #fff;
+  color: #666;
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 6px;
 }
 
-.acWord {
-  color: #999
+.acWord {}
+
+footer {
+  text-align: center;
+  background-color: #222;
+  padding: 30px;
+  color: #999;
+  min-height: 100px;
+  margin-top: 40px;
 }
 
-@media (min-width: 768px) {}
+.credits {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 300px;
+  }
+  .heading {
+    font-size: 3.5rem;
+    letter-spacing: 0.5rem;
+  }
+  .inputBox {
+    width: 600px;
+  }
+  .acList {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

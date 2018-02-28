@@ -4,7 +4,7 @@ var container = document.getElementById("acPreview");
 
 // Function to track any change in the form text field in index.html
 function getInputValue() {
-  var str = document.getElementById("input_box").value;
+  var str = document.getElementById("inputBox").value;
   // Launch main (or first) function in logic.js with updateDOM as a callback
   getWordlist(updateDOM, str);
 }
