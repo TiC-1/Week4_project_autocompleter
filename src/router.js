@@ -1,7 +1,6 @@
 var staticHandler = require("./handler.js");
 var searchHandler = require("./searchHandler.js");
 
-
 function router(request, response) {
   var endpoint = request.url;
   console.log(endpoint);
