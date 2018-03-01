@@ -1,8 +1,8 @@
 var url = require("url");
-var heavy = require("./dictionary.js");
+var read = require("./dictionary.js");
 
 function wordSearch(request, response) {
-  heavy(function(autocomplete) {
+  read(function(autocomplete) {
     var query = url.parse(request.url, true).query;
     var userInput = query.description;
     console.log(userInput);
