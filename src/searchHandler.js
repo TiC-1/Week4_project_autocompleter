@@ -9,9 +9,13 @@ function wordSearch(request, response) {
     var output = [];
     for (var i = 0, l = autocomplete.length; i < l && output.length < 10; i++) {
       var word = autocomplete[i];
+      if (userInput === ""){
+        output = [];
+      }
       if (word.indexOf(userInput) === 0) {
         output.push(word);
       }
+
     }
     console.log(output);
     response.end(JSON.stringify(output));
