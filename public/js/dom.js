@@ -2,6 +2,10 @@
 var container = document.getElementById("acPreview");
 
 
+// Event Listener to any 'inpu' changes in the form
+document.getElementById("searchForm").addEventListener("input", getInputValue);
+
+
 // Function to track any change in the form text field in index.html
 function getInputValue() {
   var str = document.getElementById("inputBox").value;
