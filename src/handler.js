@@ -8,31 +8,12 @@ function indexHandler(request, response) {
         console.error(error);
         response.writeHead(404);
       } else {
-        response.writeHead(200, {
-          "Content-type": "text/html"
-        });
+        response.writeHead(200, {"Content-type": "text/html"});
         response.write(file);
       }
       response.end();
     });
-
   }
-  //
-  // function searchHandler(request, response){
-  //         var text = request.url;
-  //         const parsed = queryString.parse(text);
-  //         console.log(parsed['/search']);
-  //         var result = wordSearch(parsed['/search']);
-  //         response.writeHead(200,{'Content-Type': 'application/json'}, function (error){
-  //         if (error){
-  //             console.log('searchHandler ' + error);
-  //             return;
-  //             }
-  //           });
-  //         console.log(result);
-  //         response.end(JSON.stringify(result));
-  //     };
-
 
 function assetsHandler (request, response){
   fs.readFile(__dirname + "/../public/" +request.url, function(error, file) {
