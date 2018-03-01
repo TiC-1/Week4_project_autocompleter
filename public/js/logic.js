@@ -1,10 +1,6 @@
-// Root domain
-var server = "http://localhost:3006/search?description=";
-
-
 // Main function to get infos from server
-function getWordlist(cb, state) {
-  var url = server + state;
+function getWordlist(cb, string) {
+  var url = "/search?description=" + string;
   request(function(err, obj) {
     cb(obj);
   }, url);
@@ -18,7 +14,7 @@ function request(cb, url) {
     if (xhr.readyState === 4) { // When request is completed
       if (xhr.status === 200) { // When request succeeded
         var responseObj = JSON.parse(xhr.responseText);
-        cb(null, responseObj); // Launch callback function
+        cb(null, responseObj); // Launch callback function (updateDOM)
       } else { // In case of error in request
         var errorMessage = xhr.responseText;
         cb("Error " + url + " " + errorMessage);
