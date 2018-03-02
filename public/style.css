@@ -6,13 +6,16 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  height: 100vh;
+  background-color: #eee;
 }
 
 .mainContainer {
   width: 100%;
   margin: 0;
-  background-color: #eee;
   text-align: center;
+  z-index: -10;
+  padding-bottom: 100px;
 }
 
 .header {
@@ -37,7 +40,7 @@ body {
 }
 
 .formContainer {
-  margin: 30px 20px;
+  margin: 10px 20px;
   text-align: center;
 }
 
@@ -45,7 +48,7 @@ body {
   text-align: center;
   color: #333;
   font-size: 1.1rem;
-  padding: 20px 0;
+  margin: 30px 0 10px 0;
 }
 
 .form {
@@ -66,6 +69,10 @@ body {
   color: #999;
 }
 
+#acPreview {
+  z-index: 100;
+}
+
 .acList {
   /*border: 1px solid #ccc;*/
   background-color: #fff;
@@ -73,7 +80,7 @@ body {
   list-style: none;
   text-align: left;
   padding: 10px;
-  margin: 20px 0;
+  margin: 10px 0;
   border-radius: 6px;
 }
 
@@ -86,6 +93,16 @@ footer {
   color: #999;
   min-height: 100px;
   margin-top: 40px;
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
 }
 
 .credits {
